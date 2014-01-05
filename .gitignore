@@ -56,3 +56,7 @@ Makefile
 /test/streaming_c
 /test/version
 /test/zone
+
+// custom
+build/
+msgpack.xcodeproj
