@@ -57,6 +57,6 @@ Makefile
 /test/version
 /test/zone
 
-// custom
+# custom
 build/
 msgpack.xcodeproj
