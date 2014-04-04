@@ -669,7 +669,7 @@ msgpack_pack_inline_func(_double)(msgpack_pack_user x, double d)
 	mem.f = d;
 	unsigned char buf[9];
 	buf[0] = 0xcb;
-#if defined(__arm__) && !(__ARM_EABI__) // arm-oabi
+#if defined(__arm__) && !(__ARM_EABI__) && (CC_TARGET_PLATFORM != CC_PLATFORM_IOS) // arm-oabi
     // https://github.com/msgpack/msgpack-perl/pull/1
     mem.i = (mem.i & 0xFFFFFFFFUL) << 32UL | (mem.i >> 32UL);
 #endif
